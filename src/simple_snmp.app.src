@@ -1,16 +1,8 @@
-{application, simple_snmp,
- [{description, "An OTP application"},
-  {vsn, "0.1.0"},
-  {registered, []},
-  {mod, { simple_snmp_app, []}},
-  {applications,
-   [kernel,
-    stdlib
-   ]},
-  {env,[]},
-  {modules, []},
-
-  {maintainers, []},
-  {licenses, []},
-  {links, []}
- ]}.
+{application, simple_snmp, [
+    {description, "Simple wrapper around Erlangs builtin SNMP"},
+    {vsn, "0.0.1"},
+    {modules, []},
+    {registered, [simple_snmp]},
+    {applications, [kernel, stdlib]},
+    {mod, {simple_snmp, []}}
+]}.
