@@ -81,6 +81,6 @@ get_next(Version, Address, Community, Oids) ->
         {ok, {_, _, Result}, _Remaining} ->
             format_result(Result, []);
         {error, Reason} ->
-            error_logger:error_msg("Derp ~p ~n", [Reason]),
+            error_logger:error_msg("SNMP error: ~p ~n", [Reason]),
             {error, Reason}
     end.
